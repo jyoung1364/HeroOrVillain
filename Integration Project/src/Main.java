@@ -208,7 +208,7 @@ public class Main {
       mission = i;
 
     }
-    scanner.close();
+    scan.close();
     return mission;
   }
 }
