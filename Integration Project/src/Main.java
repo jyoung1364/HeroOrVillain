@@ -204,9 +204,8 @@ public class Main {
     int level = scan.nextInt();
     // this will determine how many missions they will have
     for (int i = 1; i <= level; i++) {
-      System.out.print("The list of missions you'll have are" + " " + i);
+      System.out.print("The list of missions you'll have are \n " + " " + i);
       mission = i;
-
     }
     scan.close();
     return mission;
