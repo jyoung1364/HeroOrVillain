@@ -206,7 +206,6 @@ public class Main {
     for (int i = 1; i <= level; i++) {
       System.out.print("The list of missions you'll have are" + " " + i);
       mission = i;
-
     }
     scan.close();
     return mission;
