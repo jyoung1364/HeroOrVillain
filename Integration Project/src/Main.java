@@ -27,9 +27,11 @@ public class Main {
     System.out.println("Welcome to the Hero/Villain Personality Test!");
     System.out.println("This personality test will determine if you are a hero or villain");
     final int TOTALQUESTIONS = 11; // The number of questions won't change
-    int heroPoints = 0;
+    int heroPoint = 0;
+    double heroPoints = heroPoint; //this is an example of casting. I turned an int into a double
     // These points determine how much of a hero you are
-    int villainPoints = 0;
+    int villainPoint = 0;
+    double villainPoints = villainPoint;
     // These points determine how much of a villain you are
     // double ratio = (double) heroPoints / villainPoints;
     // This number will determine if you are a hero or villain
@@ -170,7 +172,7 @@ public class Main {
         "If the number is greater than 5 you will receive villain points and if not, you'll receive villain points");
     Random randomGen = new Random();
     int token;
-    for (int counter = 1; counter == 1; counter++) {
+    for (int counter = 1; counter == 1; counter++) { // == is used for statements instead of the = sign. The = sign is usually used for assigning and initializing
       token = randomGen.nextInt(10);
       System.out.println("Your number is:" + " " + token);
       if (token > 5) {
