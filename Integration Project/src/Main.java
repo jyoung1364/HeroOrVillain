@@ -210,6 +210,7 @@ public class Main {
     for (String item : names) {
       System.out.println(item + " ");
     }
+<<<<<<< HEAD
 
     ArrayList<String> powers = new ArrayList<String>(); // This is an ArrayList
     System.out.println("These are a list of powers you can have");
@@ -258,6 +259,36 @@ public class Main {
       }
       System.out.println(k);
     }
+=======
+    ArrayList<String> powers = new ArrayList<String>(); // This is an ArrayList
+    System.out.println("These are a list of powers you can have");
+    powers.add("Electricity");
+    powers.add("Flight");
+    powers.add("Teleportation");
+    powers.add("Super Strength");
+    powers.add("Super Speed");
+    System.out.println(powers);
+    int[] array = {2, 5, 10, -5, -80, 60, 70, 50}; // This is a demonstration on how to find the
+                                                   // smallest value and sum in an array
+    System.out.println(minValue(array));
+    System.out.println(sumElements(array));
+    int findVal = 60;
+    int getVal = Arrays.binarySearch(array, findVal);// This is how to search an array and identify
+                                                     // the index where a value is found
+    System.out.println("The index of element 60 is: " + getVal);
+    try { // this is how to utitlize exception handling for user input of an int
+      System.out.println("Enter num 1");
+      int num1 = scan.nextInt();
+      System.out.println("Enter num 2");
+      int num2 = scan.nextInt();
+      int sum = num1 / num2;
+      System.out.println(sum);
+    } catch (Exception e) {
+      System.out.println("You can't do this");
+    }
+    int[][] multi = {{64, 20, 15, 18, 30}, {40, 54, 50, 20, 35},}; // this is a multi-dimentsional
+                                                                   // array
+>>>>>>> branch 'master' of https://github.com/jyoung1364/HeroOrVillain
 
   }
 
