@@ -1,16 +1,16 @@
 
-public class Heroic {
+public class Heroics {
   private double strength;
   private double weakness;
   private String ability;
 
-  Heroic() {
+  Heroics() {
     this.strength = strength;
     this.weakness = weakness;
     this.ability = ability;
   }
 
-  Heroic(double strength, double weakness, String ability) {
+  Heroics(double strength, double weakness, String ability) {
     this.strength = strength;
     this.weakness = weakness;
     this.ability = ability;

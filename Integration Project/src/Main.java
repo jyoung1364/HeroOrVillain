@@ -301,7 +301,7 @@ public class Main {
     System.out.println(Math.sqrt(slice)); // This prints the square root of slice. Math.sqrt finds
                                           // the square root of numbers
     System.out.println("Please enter a number between 1 and 10");
-    Scanner scan;
+    Scanner scan = null;
     int level = scan.nextInt();
     // this will determine how many missions they will have
     for (int i = 1; i <= level; i++) {
