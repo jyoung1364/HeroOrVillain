@@ -252,7 +252,7 @@ public class Main {
       System.out.println(j);
     }
     for (int k = 0; k < 10; k++) {
-      if (k == 7) {
+      if (k == 6) {
         break; // the break statement in Java terminates the loop immediately and the control of the
                // program moves to the next statement following the loop
       }
@@ -301,6 +301,7 @@ public class Main {
     System.out.println(Math.sqrt(slice)); // This prints the square root of slice. Math.sqrt finds
                                           // the square root of numbers
     System.out.println("Please enter a number between 1 and 10");
+    Scanner scan = null;
     int level = scan.nextInt();
     // this will determine how many missions they will have
     for (int i = 1; i <= level; i++) {
