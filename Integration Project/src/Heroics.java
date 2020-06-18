@@ -5,9 +5,9 @@ public class Heroics {
   private String ability;
 
   Heroics() {
-    this.strength = strength;
-    this.weakness = weakness;
-    this.ability = ability;
+    this.strength = 10.0;
+    this.weakness = 10.0;
+    this.ability = "Flight";
   }
 
   Heroics(double strength, double weakness, String ability) {

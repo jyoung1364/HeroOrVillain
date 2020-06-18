@@ -1,4 +1,7 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
 
 // Jimmy Young
 /*
@@ -29,14 +32,24 @@ import java.util.*;
  * some of the same functionality of the parent class It's the ability of an object to take on many
  * forms
  */
+
+/** test.
+ * @author pwrji Hero or villain
+ */
 public class Main {
+
+  private static Random scan;
+
+  /**Main method.
+   * @return 
+   */
   public static void main(String[] args) {
     //
     System.out.println("Welcome to the Hero/Villain Personality Test!");
     System.out.println("This personality test will determine if you are a hero or villain");
     System.out
         .println("To get significant result type out the answer that corresponds to the letter");
-    final int TOTALQUESTIONS = 11; // The number of questions won't change
+    final int Total_Questions = 11; // The number of questions won't change
     int heroPoint = 0;
     double heroPoints = heroPoint; // this is an example of casting. I turned an int into a double
     // These points determine how much of a hero you are
@@ -55,8 +68,8 @@ public class Main {
     question = "Would you rather? A. take control of the world or B. defend the world?";
     System.out.println(question);
     String answer = scan.nextLine(); // scan.nextLine is a method that asks for input from the user
-                                     // and using the set of parenthesis is how you call the method
-    if (answer.equals("take control of the world")) {
+    // and using the set of parenthesis is how you call the method
+    if (answer.equals("A")) {
       villainPoints = 1;
     } else {
       heroPoints = 1;
@@ -66,7 +79,7 @@ public class Main {
     question = "If you find a million dollars, will you A. keep it or B. turn it in?";
     System.out.println(question);
     answer = scan.nextLine();
-    if (answer.equals("keep it")) {
+    if (answer.equals("A")) {
       villainPoints++;
     } else {
       heroPoints++;
@@ -76,7 +89,7 @@ public class Main {
     question = "If you have to stop a villain, would you A. apprehend them or B. kill them?";
     System.out.println(question);
     answer = scan.nextLine();
-    if (answer.equals("kill them")) {
+    if (answer.equals("B")) {
       villainPoints++;
     } else {
       heroPoints++;
@@ -86,7 +99,7 @@ public class Main {
     question = "Would you use your super powers as an enhancer in sports? A. yes or B. no";
     System.out.println(question);
     answer = scan.nextLine();
-    if (answer.equals("yes")) {
+    if (answer.equals("A")) {
       villainPoints++;
     } else {
       heroPoints++;
@@ -96,7 +109,7 @@ public class Main {
     question = "Your weapon in a fight would be... a A.gun, B.shield, C.fists, or D.sword?";
     System.out.println(question);
     answer = scan.nextLine();
-    if (answer.equals("gun") || answer.equals("sword")) {
+    if (answer.equals("A") || answer.equals("D")) {
       villainPoints++;
     } else {
       heroPoints++;
@@ -109,26 +122,27 @@ public class Main {
     // options would be A. Batman, B.Joker, C. Flash D. Gorilla Grodd
     answer = scan.nextLine();
     switch (answer) {
-      case "Batman":
-        heroPoints++;
-        break;//
-      case "Joker":
-        villainPoints++;
-        break;
-      case "Flash":
+      case "A":
         heroPoints++;
         break;
-      case "Gorilla Grodd":
+      case "B":
         villainPoints++;
         break;
+      case "C":
+        heroPoints++;
+        break;
+      case "D":
+        villainPoints++;
+        break;
+      default:
+        heroPoints++;
     }
     System.out.println(villainPoints);
     System.out.println(heroPoints);
-    question =
-        "If some normal people disliked you, would you use your powers to A. protect normal people or B. would you make them suffer ";
+    question = "Would you use your powers to A. protect people or B. would you make them suffer ";
     System.out.println(question);
     answer = scan.nextLine();
-    if (answer.equals("make them suffer")) {
+    if (answer.equals("B")) {
       villainPoints++;
     } else {
       heroPoints++;
@@ -138,7 +152,7 @@ public class Main {
     question = "Has your life been A. miserable or B. happy?";
     System.out.println(question);
     answer = scan.nextLine();
-    if (answer.equals("miserable")) {
+    if (answer.equals("A")) {
       villainPoints++;
     } else {
       heroPoints++;
@@ -148,7 +162,7 @@ public class Main {
     question = "Would you A. take your anger out on people or B.get help?";
     System.out.println(question);
     answer = scan.nextLine();
-    if (answer.equals("get help")) {
+    if (answer.equals("B")) {
       heroPoints++;
     } else {
       villainPoints++;
@@ -158,7 +172,7 @@ public class Main {
     question = "Are you a A. rule follower or B. rule breaker?";
     System.out.println(question);
     answer = scan.nextLine();
-    if (answer.equals("rule breaker")) {
+    if (answer.equals("B")) {
       villainPoints++;
     } else {
       heroPoints++;
@@ -166,10 +180,10 @@ public class Main {
     System.out.println(villainPoints);
     System.out.println(heroPoints);
     question =
-        "You see someone getting robbed, but then you notice it's your old bully getting robbed. Do you A.help them or B.let them suffer?";
-    System.out.println(question);
+        "You see someone getting robbed, but then you notice it's your old bully getting robbed.";
+    System.out.println(question + "Do you A.help them or B.let them suffer?");
     answer = scan.nextLine();
-    if (answer.equals("let them suffer")) {
+    if (answer.equals("B")) {
       villainPoints++;
     } else {
       heroPoints++;
@@ -177,14 +191,14 @@ public class Main {
     System.out.println(villainPoints);
     System.out.println(heroPoints);
     System.out.println(
-        "You will be given a random number between 1 and 10 that will contribute to either your hero points or villain points");
+        "You will be given a random number, 1-10 that will add hero points or villain points");
     System.out.println(
-        "If the number is greater than 5 you will receive villain points and if not, you'll receive villain points");
+        "If number is greater than 5 you receive villain points and if not, you get hero points");
     Random randomGen = new Random();
     int token;
-    for (int counter = 1; counter == 1; counter++) { // == is used for statements instead of the =
-                                                     // sign. The = sign is usually used for
-                                                     // assigning and initializing
+    for (int counter = 1; counter == 1; counter++) { /* == is used for statements instead of the =
+     // sign. The = sign is usually used for
+      assigning and initializing*/
       token = randomGen.nextInt(10);
       System.out.println("Your number is:" + " " + token);
       if (token > 5) {
@@ -219,13 +233,14 @@ public class Main {
     powers.add("Super Strength");
     powers.add("Super Speed");
     System.out.println(powers);
-    int[] array = {2, 5, 10, -5, -80, 60, 70, 50}; // This is a demonstration on how to find the
-                                                   // smallest value and sum in an array
+    int[] array = {2, 5, 10, -5, -80, 60, 70, 50}; /* This is a demonstration on how to find the
+                                                   smallest value and sum in an array*/
     System.out.println(minValue(array));
     System.out.println(sumElements(array));
+    System.out.println(array[0]);
     int findVal = 60;
-    int getVal = Arrays.binarySearch(array, findVal);// This is how to search an array and identify
-                                                     // the index where a value is found
+    int getVal = Arrays.binarySearch(array, findVal);
+    // This is how to search an array and identify the index where a value is found
     System.out.println("The index of element 60 is: " + getVal);
     try { // this is how to utitlize exception handling for user input of an int
       System.out.println("Enter num 1");
@@ -234,11 +249,14 @@ public class Main {
       int num2 = scan.nextInt();
       int remainder = num1 % num2;
       System.out.println(remainder);
+    } catch (RuntimeException e) {
+      throw e;      
     } catch (Exception e) {
       System.out.println("You can't do this");
     }
-    int[][] multi = {{64, 20, 15, 18, 30}, {40, 54, 50, 20, 35},}; // this is a multi-dimentsional
-                                                                   // array
+    int[][] multi = {{64, 20, 15, 18, 30}, {40, 54, 50, 20, 35}};
+    //this is a multi-dimensional array
+    System.out.println(multi[0][5]);
     int fights = 1;
     do { // do while loop
       System.out.println(fights);
@@ -246,15 +264,18 @@ public class Main {
     } while (fights < 10);
     for (int j = 0; j < 10; j++) {
       if (j == 3) {
-        continue;// the continue statement breaks one interation in the loop if a specified
-                 // condition occurs, and continues with the next iteration in the loop
+        continue;
+        // the continue statement breaks one iteration in the loop if a specified condition occurs,
+        // and continues with the next iteration in the loop
       }
       System.out.println(j);
     }
     for (int k = 0; k < 10; k++) {
       if (k == 6) {
-        break; // the break statement in Java terminates the loop immediately and the control of the
-               // program moves to the next statement following the loop
+        break; /*
+                * the break statement in Java terminates the loop immediately and the control of the
+                * program moves to the next statement following the loop
+                */
       }
       System.out.println(k);
     }
@@ -266,9 +287,18 @@ public class Main {
     return product;
   }
 
-  public int multiply(int a, int b, int c) {// this overloads the previous method due to the change
-                                            // in the number of parameters // in the number of
-                                            // paramters
+  /**
+   * @param 
+   * @param 
+   * @return product
+   * @return
+   */
+  public int multiply(int a, int b,
+      int c) {
+      
+    /* this overloads the previous method due to the change in the number of parameters 
+       in the number of paramters
+      */
     int product = a * b * c;
     return product;
   }
@@ -282,7 +312,11 @@ public class Main {
     }
     return minValue;
   }
-
+  /**Finds elements.
+   * @param
+   *@exception
+   */
+  
   public static int sumElements(int[] array) {
     int sumElements = 0;
     for (int i = 0; i < array.length; i++) {
@@ -291,6 +325,10 @@ public class Main {
     return sumElements;
   }
 
+  /** mission 
+   * @param 
+   * @exception
+   */
   public static int calculateMissions(
       int mission) { /*
                       * int mission is the parameter and the header is "public static int" since it
@@ -298,17 +336,17 @@ public class Main {
                       */
     System.out.println("Before we start, here is a demonstration on how to use the Math class");
     int slice = 9;
-    System.out.println(Math.sqrt(slice)); // This prints the square root of slice. Math.sqrt finds
-                                          // the square root of numbers
+    System.out.println(Math.sqrt(
+        slice)); /*
+                  * This prints the square root of slice. Math.sqrt finds the square root of numbers
+                  */
     System.out.println("Please enter a number between 1 and 10");
-    Scanner scan = null;
     int level = scan.nextInt();
     // this will determine how many missions they will have
     for (int i = 1; i <= level; i++) {
       System.out.print("The list of missions you'll have are \n " + " " + i);
       mission = i;
     }
-    scan.close();
     return mission;
   }
 }
