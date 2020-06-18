@@ -188,6 +188,7 @@ public class Main {
     } else {
       heroPoints++;
     }
+    scan.close();
     System.out.println(villainPoints);
     System.out.println(heroPoints);
     System.out.println(

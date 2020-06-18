@@ -11,9 +11,9 @@ public class Heroics {
   }
 
   Heroics(double strength, double weakness, String ability) {
-    this.strength = strength;
-    this.weakness = weakness;
-    this.ability = ability;
+    this.strength = 15.0;
+    this.weakness = 15.0;
+    this.ability = "Super Strength";
   }
 
   public double getStrength() {
